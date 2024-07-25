@@ -1,5 +1,4 @@
----
-- name: Run Windows Service
+- name: Remove a service
   hosts: 192.168.5.80
   win_service: 
     name: PlugPlay
