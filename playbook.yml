@@ -1,7 +1,10 @@
 ---
-- name: "Test playbook run"
-  hosts: all
+- name: win_powershell_exec
+  hosts: windows_all
   tasks:
-    - name: "Debug"
+    - name: check DNS
+      win_shell: |
+        Get-DnsClientServerAddress -InterfaceIndex (Get-NetAdapter|where Status -eq "Up").ifindex -ErrorAction SilentlyContinue
+      register: command_output
+    - name: command output
       ansible.builtin.debug:
-        msg: "Test debug"
