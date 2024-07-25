@@ -4,6 +4,6 @@
   win_service: 
     name: PlugPlay
     state: stop
-    username:  Andrey
-    password: 23
+    username:  LocalSystem
+    
 
