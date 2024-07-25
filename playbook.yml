@@ -1,6 +1,6 @@
 ---
 - name: win_powershell_exec
-  hosts: windows_all
+  hosts: any
   tasks:
     - name: check DNS
       win_shell: |
