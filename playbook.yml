@@ -1,6 +1,9 @@
 ---
 - name: win_powershell_exec
-  hosts: any
+  hosts: 192.168.5.80
+  user: Andrey
+  become: true
+  become_user: Andrey
   tasks:
     - name: check DNS
       win_shell: |
