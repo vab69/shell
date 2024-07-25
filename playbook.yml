@@ -1,14 +1,11 @@
 ---
-- name: win_powershell_exec
+- name: Run Windows Service
   hosts: 192.168.5.80
   user: Andrey
   password: 23
   become: true
   become_user: Andrey
-  tasks:
-    - name: check DNS
-      win_shell: |
-        Get-DnsClientServerAddress -InterfaceIndex (Get-NetAdapter|where Status -eq "Up").ifindex -ErrorAction SilentlyContinue
-      register: command_output
-    - name: command output
-      ansible.builtin.debug:
+  win_service: 
+    name: PlugPlay
+    state: stop
+
