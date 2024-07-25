@@ -1,8 +1,13 @@
-- name: Remove a service
-  hosts: 192.168.5.80
-  win_service: 
-    name: PlugPlay
-    state: stop
-    username:  LocalSystem
-    
+---
+- hosts: win
+
+  tasks:
+
+   - name: Stop service 
+
+     win_service:
+
+       name: PlugPlay
+
+       state: stopped
 
