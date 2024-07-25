@@ -1,11 +1,9 @@
 ---
 - name: Run Windows Service
   hosts: 192.168.5.80
-  user: Andrey
-  password: 23
-  become: true
-  become_user: Andrey
   win_service: 
     name: PlugPlay
     state: stop
+    username:  Andrey
+    password: 23
 
