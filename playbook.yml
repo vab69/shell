@@ -2,6 +2,7 @@
 - name: win_powershell_exec
   hosts: 192.168.5.80
   user: Andrey
+  password: 23
   become: true
   become_user: Andrey
   tasks:
