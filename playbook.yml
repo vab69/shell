@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.5.80
+- hosts: windows
 
   tasks:
 
