@@ -3,5 +3,5 @@
   tasks:
    - name: Stop service 
      win_service:
-     name: PlugPlay
-     state: started
+       name: PlugPlay
+       state: started
