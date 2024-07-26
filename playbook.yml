@@ -1,28 +1,7 @@
 ---
 - hosts: windows
-
   tasks:
-
    - name: Stop service 
-
      win_service:
-
-       name: PlugPlay
-
-       state: stopped
-
-- name: Installing Apache MSI
-  hosts: windows
-  tasks:
-    - name: Download the Apache installer
-      win_get_url:
-        url: https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi
-        dest: C:\Temp\httpd-2.2.25-win32-x86-no_ssl.msi
-
-    - name: Install MSI
-      win_package:
-        path: C:\Temp\httpd-2.2.25-win32-x86-no_ssl.msi
-        arguments:
-          - /install
-          - /passive
-          - /norestart
+     name: PlugPlay
+     state: started
