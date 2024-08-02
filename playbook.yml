@@ -4,4 +4,4 @@
    - name: Stop service 
      win_service:
        name: PlugPlay
-       state: started
+       state: stopped
